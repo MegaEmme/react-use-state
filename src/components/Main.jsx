@@ -4,7 +4,7 @@ import Card from "./Card";
 import Button from "./Button";
 
 function Main() {
-    const [press, setPress] = useState(null);
+    const [press, setPress] = useState(false);
 
     return (
         <>

@@ -5,6 +5,9 @@ function Button(props) {
     const [isActive, setIsActive] = useState(null);
     return (
         <>
+            <div className={`btn mb-5 m-2 ${isActive === null ? 'd-block' : 'd-none'}`}>
+                <h4 className="card-body">NESSUN LINGUAGGIO SELEZIONATO</h4>
+            </div>
             {buttons.map(element =>
                 <button onClick={() => { setIsActive(element.title) }} key={element.id} className={`btn mb-5 m-2 ${isActive === element.title ? 'btn-warning' : 'btn-primary'}`}>
                     {element.title}
