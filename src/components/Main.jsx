@@ -1,9 +1,14 @@
 import languages from "../data/languages";
+import Button from "./Button";
+import Card from "./Card";
 
 function Main() {
     return (
         <>
-            <button>clicca</button>
+            <div className="container">
+                <Button Button={languages} />
+                <Card Card={languages} />
+            </div>
         </>
     )
 };

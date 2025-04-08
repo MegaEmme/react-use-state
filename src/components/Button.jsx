@@ -1,7 +1,10 @@
-function Button() {
+function Button(props) {
+    const buttons = props.Button;
     return (
         <>
-            <button>cliccami</button>
+            {buttons.map(element =>
+                <button key={element.id} className="btn btn-primary mb-5 m-2">{element.title}</button>
+            )}
         </>
     )
 };
