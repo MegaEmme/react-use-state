@@ -6,7 +6,7 @@ function Button(props) {
     return (
         <>
             {buttons.map(element =>
-                <button onClick={() => { setIsActive(element.title) }} key={element.id} className="btn btn-primary mb-5 m-2">
+                <button onClick={() => { setIsActive(element.title) }} key={element.id} className={`btn mb-5 m-2 ${isActive === element.title ? 'btn-warning' : 'btn-primary'}`}>
                     {element.title}
                 </button>
             )}
