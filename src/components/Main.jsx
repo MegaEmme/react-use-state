@@ -1,20 +1,18 @@
 import { useState } from "react";
 import languages from "../data/languages";
 import Card from "./Card";
+import Button from "./Button";
 
 function Main() {
-    const [press, setPress] = useState(languages[0].title);
+    const [press, setPress] = useState(null);
+
     return (
         <>
             {console.log(press)}
             <div className="container">
-                {languages.map(element =>
-                    <button onClick={() => { setPress(element.title) }} key={element.id} className="btn btn-primary mb-5 m-2">
-                        {element.title}
-                    </button>
-                )}
+                <Button Buttons={languages} />
                 <Card Cards={languages.filter(element => element.title === press)} />
-            </div>
+            </div >
         </>
     )
 };
