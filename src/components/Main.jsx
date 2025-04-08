@@ -4,13 +4,12 @@ import Card from "./Card";
 import Button from "./Button";
 
 function Main() {
-    const [press, setPress] = useState(false);
+    const [press, setPress] = useState("");
 
     return (
         <>
-            {console.log(press)}
             <div className="container">
-                <Button Buttons={languages} />
+                <Button Buttons={languages} changePress={setPress} />
                 <Card Cards={languages.filter(element => element.title === press)} />
             </div >
         </>
