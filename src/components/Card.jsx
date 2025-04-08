@@ -1,5 +1,5 @@
 function Card(props) {
-    const cards = props.Card
+    const cards = props.Cards
     return (
         <>
             {cards.map(element =>
